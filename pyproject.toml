@@ -19,6 +19,11 @@ pyarrow = "^5.0.0"
 matplotlib = "^3.4.3"
 
 [tool.poetry.dev-dependencies]
+pytest = "^6.2.5"
+black = "^21.9b0"
+mypy = "^0.910"
+flake8 = "^3.9.2"
+isort = "^5.9.3"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
