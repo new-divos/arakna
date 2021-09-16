@@ -44,6 +44,7 @@
 			".mypy_cache": true,
 			"__pycache__": true
 		},
+		
 		"workbench.colorCustomizations": {
 			"activityBar.activeBackground": "#798e89",
 			"activityBar.activeBorder": "#79308f",
