@@ -1,0 +1,66 @@
+{
+	"folders": [
+		{
+			"name": "arakna",
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.autoSave": "onFocusChange",
+		"terminal.integrated.profiles.windows": {
+			"Anaconda Command Prompt": {
+				"path": "C:\\Windows\\System32\\cmd.exe",
+				"args": [
+					"/K",
+					"C:\\tools\\Anaconda3\\Scripts\\activate.bat C:\\tools\\Anaconda3"
+				]
+			},
+			"Anaconda PowerShell": {
+				"source": "PowerShell",
+				"args": [
+					"-ExecutionPolicy",
+					"ByPass",
+					"-NoExit",
+					"-Command",
+					"C:\\tools\\Anaconda3\\shell\\condabin\\conda-hook.ps1",
+					";conda activate 'C:\\tools\\Anaconda3'"
+				]
+			}
+		},
+		"terminal.integrated.defaultProfile.windows": "Anaconda PowerShell",
+		"terminal.integrated.automationShell.windows": "cmd.exe",
+		"terminal.integrated.env.osx": {
+			"PYTHONPATH": "${workspaceFolder}/src"
+		},
+		"terminal.integrated.env.linux": {
+			"PYTHONPATH": "${workspaceFolder}/src"
+		},
+		"terminal.integrated.env.windows": {
+			"PYTHONPATH": "${workspaceFolder}\\src"
+		},
+
+		"files.exclude": {
+			".pytest_cache": true,
+			".mypy_cache": true,
+			"__pycache__": true
+		},
+		"workbench.colorCustomizations": {
+			"activityBar.activeBackground": "#798e89",
+			"activityBar.activeBorder": "#79308f",
+			"activityBar.background": "#798e89",
+			"activityBar.foreground": "#15202b",
+			"activityBar.inactiveForeground": "#15202b99",
+			"activityBarBadge.background": "#79308f",
+			"activityBarBadge.foreground": "#e7e7e7",
+			"statusBar.background": "#61736f",
+			"statusBar.foreground": "#e7e7e7",
+			"statusBarItem.hoverBackground": "#798e89",
+			"titleBar.activeBackground": "#61736f",
+			"titleBar.activeForeground": "#e7e7e7",
+			"titleBar.inactiveBackground": "#61736f99",
+			"titleBar.inactiveForeground": "#e7e7e799"
+		},
+		"peacock.color": "#61736f",
+
+	}
+}

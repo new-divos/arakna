@@ -1,0 +1,73 @@
+{
+    "files.autoSave": "onFocusChange",
+
+    "editor.formatOnSave": false,
+    "editor.fontFamily": "Fira Code", 
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+
+    "terminal.integrated.profiles.windows": {
+        "Anaconda Command Prompt": {
+            "path": "C:\\Windows\\System32\\cmd.exe",
+            "args": [ 
+                "/K", 
+                "C:\\tools\\Anaconda3\\Scripts\\activate.bat C:\\tools\\Anaconda3"
+            ]
+        },
+        "Anaconda PowerShell": {
+            "source": "PowerShell",
+            "args": [
+                "-ExecutionPolicy",
+                "ByPass",
+                "-NoExit",
+                "-Command",
+                "C:\\tools\\Anaconda3\\shell\\condabin\\conda-hook.ps1",
+                ";conda activate 'C:\\tools\\Anaconda3'"
+            ]
+        }
+    },
+
+    "terminal.integrated.defaultProfile.windows": "Anaconda PowerShell",
+    "terminal.integrated.automationShell.windows": "cmd.exe",
+
+    "terminal.integrated.env.osx": {"PYTHONPATH": "${workspaceFolder}/src"},
+    "terminal.integrated.env.linux": {"PYTHONPATH": "${workspaceFolder}/src"},
+    "terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFolder}\\src"},
+    "python.envFile": "${workspaceFolder}/.env",
+
+    "python.defaultInterpreterPath": "C:\\tools\\Anaconda3\\envs\\research\\python.exe",
+    "python.terminal.activateEnvironment": true,
+    "python.condaPath": "conda",
+
+    "python.analysis.extraPaths": [
+        "${workspaceFolder}/src",
+        "${workspaceFolder}/tests"
+    ],
+
+    "python.autoComplete.extraPaths": [
+        "${workspaceFolder}/src"
+    ],
+
+    "python.formatting.provider": "black",
+    "python.formatting.blackPath": "black",
+    "python.formatting.blackArgs": [],
+    "python.sortImports.args": ["--profile", "black"],
+    "[python]": {
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    },
+
+    "python.linting.flake8Enabled": true,
+    "python.linting.flake8Path": "flake8",
+    
+    "python.linting.mypyEnabled": true,
+    "python.linting.mypyPath": "mypy",
+    "python.linting.mypyArgs": [
+        "${workspaceFolder}",
+        "--follow-imports=silent",
+        "--ignore-missing-imports",
+        "--show-column-numbers"
+    ]
+}

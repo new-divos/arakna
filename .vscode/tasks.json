@@ -1,0 +1,58 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "git-checkout",
+            "type": "shell",
+            "command": "git checkout develop"
+        },
+        {
+            "label": "git-pull",
+            "type": "shell",
+            "command": "git pull --rebase"
+        },
+        {
+            "label": "init",
+            "dependsOrder": "sequence",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn": [
+                "git-checkout",
+                "git-pull"
+            ]
+        },
+        {
+            "label": "black",
+            "type": "shell",
+            "command": "conda run -n arakna poetry run black ${workspaceFolder}"
+        },
+        {
+            "label": "isort",
+            "type": "shell",
+            "command": "conda run -n arakna poetry run isort ${workspaceFolder}"
+        },
+        {
+            "label": "mypy",
+            "type": "shell",
+            "command": "conda run -n arakna poetry run mypy ${workspaceFolder}"
+        },
+        {
+            "label": "flake8",
+            "type": "shell",
+            "command": "conda run -n arakna poetry run flake8 ${workspaceFolder}"
+        },
+        {
+            "label": "check",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "black",
+                "isort",
+                "mypy",
+                "flake8"
+            ]
+        }
+    ]
+}
