@@ -6,7 +6,7 @@ authors = ["Roman Voronkin <roman.voronkin@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = ">=3.9,<3.11"
+python = ">=3.9,<3.10"
 click = "^8.0.1"
 Flask = "^2.0.1"
 Jinja2 = "^3.0.1"
@@ -17,6 +17,10 @@ numpy = "^1.21.2"
 pandas = "^1.3.3"
 pyarrow = "^5.0.0"
 matplotlib = "^3.4.3"
+scikit-learn = "^0.24.2"
+joblib = "^1.0.1"
+scipy = "^1.7.1"
+simpy = "^4.0.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
@@ -24,6 +28,7 @@ black = "^21.9b0"
 mypy = "^0.910"
 flake8 = "^3.9.2"
 isort = "^5.9.3"
+pre-commit = "^2.15.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
