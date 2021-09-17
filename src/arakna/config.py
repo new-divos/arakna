@@ -20,3 +20,7 @@ class Config:
 
     def init_app(self, _app: Flask) -> None:
         pass
+
+
+def get_config() -> Config:
+    return Config()
