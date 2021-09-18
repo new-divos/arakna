@@ -30,9 +30,25 @@
     "terminal.integrated.defaultProfile.windows": "Anaconda PowerShell",
     "terminal.integrated.automationShell.windows": "cmd.exe",
 
-    "terminal.integrated.env.osx": {"PYTHONPATH": "${workspaceFolder}/src"},
-    "terminal.integrated.env.linux": {"PYTHONPATH": "${workspaceFolder}/src"},
-    "terminal.integrated.env.windows": {"PYTHONPATH": "${workspaceFolder}\\src"},
+    "terminal.integrated.env.osx": {
+        "PYTHONPATH": "${workspaceFolder}/src",
+        "FLASK_APP": "arakna.manage:app",
+        "FLASK_ENV": "development",
+        "FLASK_DEBUG": "0"
+    },
+    "terminal.integrated.env.linux": {
+        "PYTHONPATH": "${workspaceFolder}/src",
+        "FLASK_APP": "arakna.manage:app",
+        "FLASK_ENV": "development",
+        "FLASK_DEBUG": "0"
+
+    },
+    "terminal.integrated.env.windows": {
+        "PYTHONPATH": "${workspaceFolder}\\src",
+        "FLASK_APP": "arakna.manage:app",
+        "FLASK_ENV": "development",
+        "FLASK_DEBUG": "0"
+    },
     "python.envFile": "${workspaceFolder}/.env",
 
     "python.defaultInterpreterPath": "C:\\tools\\Anaconda3\\envs\\research\\python.exe",

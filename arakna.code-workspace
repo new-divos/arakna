@@ -30,13 +30,22 @@
 		"terminal.integrated.defaultProfile.windows": "Anaconda PowerShell",
 		"terminal.integrated.automationShell.windows": "cmd.exe",
 		"terminal.integrated.env.osx": {
-			"PYTHONPATH": "${workspaceFolder}/src"
+			"PYTHONPATH": "${workspaceFolder}/src",
+			"FLASK_APP": "arakna.manage:app",
+			"FLASK_ENV": "development",
+			"FLASK_DEBUG": "0"
 		},
 		"terminal.integrated.env.linux": {
-			"PYTHONPATH": "${workspaceFolder}/src"
+			"PYTHONPATH": "${workspaceFolder}/src",
+			"FLASK_APP": "arakna.manage:app",
+			"FLASK_ENV": "development",
+			"FLASK_DEBUG": "0"
 		},
 		"terminal.integrated.env.windows": {
-			"PYTHONPATH": "${workspaceFolder}\\src"
+			"PYTHONPATH": "${workspaceFolder}\\src",
+			"FLASK_APP": "arakna.manage:app",
+			"FLASK_ENV": "development",
+			"FLASK_DEBUG": "0"
 		},
 
 		"files.exclude": {

@@ -16,4 +16,8 @@ def create_app(config: ConfigProtocol) -> Flask:
     if hasattr(config, "init_app") and callable(config.init_app):
         config.init_app(app)
 
+    from arakna.process import process as process_blueprint
+
+    app.register_blueprint(process_blueprint)
+
     return app
