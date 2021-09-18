@@ -21,6 +21,12 @@ scikit-learn = "^0.24.2"
 joblib = "^1.0.1"
 scipy = "^1.7.1"
 simpy = "^4.0.1"
+PyYAML = "^5.4.1"
+tqdm = "^4.62.2"
+xgboost = "^1.4.2"
+catboost = "^0.26.1"
+lightgbm = "^3.2.1"
+plotly = "^5.3.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"
