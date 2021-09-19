@@ -108,6 +108,9 @@ def isotonic() -> None:
                 ensure_ascii=False,
                 indent=4,
             )
+        current_app.logger.info(
+            f"The transformation totals were saved to the file {out_file_path}"
+        )
 
     except Exception as e:
         current_app.logger.error(

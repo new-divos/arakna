@@ -55,7 +55,7 @@ class Property(t.Generic[T]):
         h_next = np.ones_like(h_curr)
         h_next[:-1] = h_curr[1:]
 
-        return float(np.dot(self.__df[self.__value_attr].values, (h_next - h_curr)))
+        return float(2.0 * (self.__df[self.__value_attr].values @ (h_next - h_curr)))
 
     def to_dict(self) -> t.Dict[str, float]:
         return {
