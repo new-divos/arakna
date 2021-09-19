@@ -15,7 +15,7 @@ from arakna.process.validation import validate_amount, validate_factor, validate
 __all__ = ["isotonic", "transform"]
 
 
-@h2qs.group("transform")
+@h2qs.group("transform")  # type: ignore
 @click.option(
     "--rate",
     type=float,

@@ -16,7 +16,7 @@ from arakna.process.h2qs.stats import Stats
 from arakna.process.h2qs.transform import transform
 
 
-@transform.command("isotonic")
+@transform.command("isotonic")  # type: ignore
 @with_appcontext
 def isotonic() -> None:
     file_path = current_app.config["DATASET_PATH"]

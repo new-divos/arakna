@@ -2,6 +2,7 @@
     "files.autoSave": "onFocusChange",
 
     "editor.formatOnSave": false,
+    "editor.minimap.enabled": false,
     "editor.fontFamily": "Fira Code", 
     "editor.fontSize": 14,
     "editor.fontLigatures": true,
@@ -51,7 +52,6 @@
     },
     "python.envFile": "${workspaceFolder}/.env",
 
-    "python.defaultInterpreterPath": "C:\\tools\\Anaconda3\\envs\\research\\python.exe",
     "python.terminal.activateEnvironment": true,
     "python.condaPath": "conda",
 

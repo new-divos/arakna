@@ -12,7 +12,10 @@ APP_NAME: t.Final[str] = "arakna"
 
 def create_app(config: ConfigProtocol) -> Flask:
     app = Flask(APP_NAME)
+
     app.config.from_object(config)
+    app.config["APP_NAME"] = APP_NAME
+
     if hasattr(config, "init_app") and callable(config.init_app):
         config.init_app(app)
 

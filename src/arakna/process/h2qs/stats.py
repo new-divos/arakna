@@ -57,10 +57,10 @@ class Property(t.Generic[T]):
 
         return float(2.0 * (self.__df[self.__value_attr].values @ (h_next - h_curr)))
 
-    def to_dict(self) -> t.Dict[str, float]:
+    def to_dict(self) -> t.Dict[str, t.Union[T, float]]:
         return {
-            "min": float(self.min()),
-            "max": float(self.max()),
+            "min": self.min(),
+            "max": self.max(),
             "avg": self.avg(),
         }
 

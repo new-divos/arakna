@@ -13,10 +13,10 @@ from flask.cli import with_appcontext
 from arakna.process import process
 from arakna.process.path import get_data_path, get_data_root, get_output_root
 
-__all__ = ["h2qs", "transform"]
+__all__ = ["h2qs", "plot", "transform"]
 
 
-@process.cli.group("h2qs")
+@process.cli.group("h2qs")  # type: ignore
 @click.argument("dataset", type=str, required=True)
 @click.option("--quiet", is_flag=True)
 @click.option(
@@ -52,4 +52,5 @@ def h2qs(
     current_app.logger.info(f"Using the dataset {dataset} from the file {dataset_path}")
 
 
+from arakna.process.h2qs.plot import plot  # noqa: E402
 from arakna.process.h2qs.transform import transform  # noqa: E402

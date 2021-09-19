@@ -1,0 +1,135 @@
+h2qs:
+  name: default
+  version: 1.0
+
+  plot:
+    # The plot width.
+    width: 8.0
+    # The plot height.
+    height: 6.0
+
+    # The plot title configuration.
+    title:
+      # The title font settings.
+      fontdict:
+        fontsize: 14
+        fontweight: normal
+        color: slategray
+        verticalalignment: baseline
+      # Which title to set.
+      loc: center  # center, left, right
+      # The offset of the title from the top of the Axes, in points.
+      pad: 12.0
+
+    # The plot x-axis label configuration.
+    xlabel:
+      # The label font settings.
+      fontdict:
+        fontsize: 11
+        fontweight: normal
+        color: slategray
+        verticalalignment: baseline
+      # The label position.
+      loc: center  # center, left, right
+      # Spacing in points from the axes bounding box including ticks and tick labels.
+      labelpad: 14.0
+
+
+    # The plot y-axis label configuration.
+    ylabel:
+      # The label font settings.
+      fontdict:
+        fontsize: 11
+        fontweight: normal
+        color: slategray
+        verticalalignment: baseline
+      # The label position.
+      loc: center  # center, top, bottom
+      # Spacing in points from the axes bounding box including ticks and tick labels.
+      labelpad: 7.0
+
+    # The plot legend configuration
+    legend:
+      # The location of the legend.
+      loc: best  # best, right, center, etc.
+      # The number of columns that the legend has.
+      ncol: 1
+      # The font size of the legend.
+      fontsize: small
+      # If true, legend marker is placed to the left of the legend label.
+      # If false, legend marker is placed to the right of the legend label.
+      markerfirst: true
+      # Whether the legend should be drawn on a patch (frame).
+      frameon: true
+      # Whether round edges should be enabled around the fancy box
+      # which makes up the legend's background.
+      fancybox: true
+      # Whether to draw a shadow behind the legend.
+      shadow: false
+      # The alpha transparency of the legend's background.
+      framealpha: 0.75
+      # The legend's background color.
+      facecolor: azure
+      # The legend's background patch edge color.
+      edgecolor: cadetblue
+
+    # The plot grid configuration
+    grid:
+      # The grid lines to apply the changes on.
+      which: both  # major, minor, both
+      # The axis to apply the changes on.
+      axis: both  # x, y, both
+      # The grid lines color.
+      color: steelblue
+      # The grid lines style.
+      linestyle: --
+      # The grid lines width.
+      linewidth: 0.5
+
+    # The prediction plot
+    prediction:
+      title:
+        # Text to use for the title.
+        text: График зависимости размера очереди от показателя Херста $H$
+
+      xlabel:
+        # The label text.
+        text: Значение показателя Херста $H$
+
+      ylabel:
+        # The label text.
+        text: Размер очереди
+
+      legend:
+        # The color of the text in the legend.
+        labelcolor:
+          - crimson
+          - teal
+
+      # The scatter plot settings for the true values.
+      qs_true:
+        # The marker style.
+        marker: o
+        # The marker color.
+        color: teal
+        # The alpha blending value.
+        alpha: 0.05
+        # The linewidth of the marker edges.
+        linewidths: 1.0
+        # The edge color of the marker.
+        edgecolors: face
+        # The true values label.
+        label: Результаты имитационного моделирования
+
+      # The scatter plot settings for the predicted values.
+      qs_pred:
+        # The line color.
+        color: crimson
+        # The alpha blending value.
+        alpha: 0.5
+        # The line style of the line.
+        linestyle: "-"
+        # The line width of the line.
+        linewidth: 2
+        # The true values label.
+        label: Результаты предсказания

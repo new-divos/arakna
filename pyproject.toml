@@ -27,6 +27,7 @@ xgboost = "^1.4.2"
 catboost = "^0.26.1"
 lightgbm = "^3.2.1"
 plotly = "^5.3.1"
+types-PyYAML = "^5.4.10"
 
 [tool.poetry.dev-dependencies]
 pytest = "^6.2.5"

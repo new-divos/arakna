@@ -8,11 +8,11 @@ from pathlib import Path
 
 CSIDL_PERSONAL: t.Final[int] = 5  # Мои документы
 SHGFP_TYPE_CURRENT: t.Final[int] = 0  # Получить текущее значение
-DATA_ROOT_OFFSET: t.Final[int] = 3
+ROOT_OFFSET: t.Final[int] = 3
 
 
 def get_data_root() -> Path:
-    return Path(__file__).absolute().parents[DATA_ROOT_OFFSET] / "data"
+    return Path(__file__).absolute().parents[ROOT_OFFSET] / "data"
 
 
 def get_data_path(
@@ -60,3 +60,13 @@ def get_output_root() -> Path:
 
     else:
         raise RuntimeError(f"Unknown platform {current_platform}")
+
+
+def get_config_root() -> Path:
+    return Path(__file__).absolute().parents[ROOT_OFFSET] / "config"
+
+
+def get_image_name(dataset: str, fmt: str) -> str:
+    parts = dataset.split("::")
+    lst = [part.split(".")[0] for part in parts if part]
+    return f"{'.'.join(lst)}.{fmt}"
