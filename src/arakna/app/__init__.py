@@ -1,21 +1,31 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import typing as t
+import logging
 
 from flask import Flask
 
 from arakna.config import ConfigProtocol
 
-APP_NAME: t.Final[str] = "arakna"
-
 
 def create_app(config: ConfigProtocol) -> Flask:
-    app = Flask(APP_NAME)
+    log_path = config["LOG_PATH"]  # typing: Path
+    log_path.mkdir(parents=True, exist_ok=True)
+
+    log_format_str = (
+        "[%(asctime)s] p%(process)s {%(pathname)s:%(lineno)d} "
+        "%(levelname)s - %(message)s"
+    )
+    logging.basicConfig(
+        level=logging.INFO,
+        format=log_format_str,
+        datefmt="%Y-%m-%d %H:%M:%S",
+        filename=log_path / "global.log",
+    )
+
+    app = Flask(config["APP_NAME"])
 
     app.config.from_object(config)
-    app.config["APP_NAME"] = APP_NAME
-
     if hasattr(config, "init_app") and callable(config.init_app):
         config.init_app(app)
 

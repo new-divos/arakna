@@ -7,7 +7,7 @@
         "beta_plus": 1.0,
         "beta_minus": 0.3,
         "delta": 20,
-        "timestamp": "2021-09-19 12:08:25",
+        "timestamp": "2021-09-21 14:33:38",
         "model": "isotonic"
     },
     "metrics": {
@@ -39,8 +39,8 @@
         },
         "performance": {
             "loss": {
-                "min": 0.0,
-                "max": 228.0,
+                "min": 0,
+                "max": 228,
                 "avg": 19.201755909421017
             },
             "loss_probability": {
@@ -51,12 +51,12 @@
             "qos": {
                 "min": 0.77734375,
                 "max": 1.0,
-                "avg": 0.9812410544534432
+                "avg": 0.9812410544534431
             },
             "queue_efficiency": {
                 "min": 0.23140495867768596,
                 "max": 1.0,
-                "avg": 0.8632574540065354
+                "avg": 0.8632574540065355
             },
             "penalty": {
                 "min": 0.0,
