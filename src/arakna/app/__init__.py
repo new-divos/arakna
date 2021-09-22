@@ -9,9 +9,6 @@ from arakna.config import ConfigProtocol
 
 
 def create_app(config: ConfigProtocol) -> Flask:
-    log_path = config["LOG_PATH"]  # typing: Path
-    log_path.mkdir(parents=True, exist_ok=True)
-
     log_format_str = (
         "[%(asctime)s] p%(process)s {%(pathname)s:%(lineno)d} "
         "%(levelname)s - %(message)s"
@@ -20,7 +17,7 @@ def create_app(config: ConfigProtocol) -> Flask:
         level=logging.INFO,
         format=log_format_str,
         datefmt="%Y-%m-%d %H:%M:%S",
-        filename=log_path / "global.log",
+        filename=config["LOGGING_PATH"],
     )
 
     app = Flask(config["APP_NAME"])

@@ -19,7 +19,9 @@ class ConfigProtocol(t.Protocol):
 class Config:
     APP_NAME: t.Final[str] = "arakna"
     SECRET_KEY: t.Final[str] = os.getenv("SECRET_KEY", ":'(")
-    LOG_PATH: t.Final[Path] = Path(os.getenv("LOG_PATH", str(Path.home() / ".arakna")))
+    LOGGING_PATH: t.Final[Path] = Path(
+        os.getenv("LOGGING_PATH", str(Path.home().joinpath(".arakna", "global.log")))
+    )
 
     def __init__(self):
         pass
@@ -28,7 +30,7 @@ class Config:
         return self.__dict__.get(key) or self.__class__.__dict__.get(key)
 
     def init_app(self, _app: Flask) -> None:
-        pass
+        self.LOGGING_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 
 def get_config() -> Config:
